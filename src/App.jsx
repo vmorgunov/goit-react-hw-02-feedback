@@ -33,7 +33,7 @@ export default class App extends Component {
     const { good, bad, neutral } = this.state;
     return (
       <div>
-        <Section titel="Please leave feedback"></Section>
+        <Section titel="Please leave feedback" />
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.handleFeedback}
