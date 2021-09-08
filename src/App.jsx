@@ -30,11 +30,11 @@ export default class App extends Component {
 
   render() {
     const { good, bad, neutral } = this.state;
+    const options = ['good', 'neutral', 'bad'];
     return (
-      <div>
-        <Section titel="Please leave feedback" />
+      <Section titel="Please leave feedback">
         <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
+          options={options}
           onLeaveFeedback={this.handleFeedback}
         />
         <Statistics
@@ -43,8 +43,8 @@ export default class App extends Component {
           bad={bad}
           total={this.countTotalFeedback()}
           positivePercentage={this.countPositiveFeedbackPercentage()}
-        ></Statistics>
-      </div>
+        />
+      </Section>
     );
   }
 }
