@@ -30,7 +30,7 @@ export default class App extends Component {
 
   render() {
     const { good, bad, neutral } = this.state;
-    const options = ['good', 'neutral', 'bad'];
+    const options = Object.keys(this.state);
     return (
       <Section titel="Please leave feedback">
         <FeedbackOptions
